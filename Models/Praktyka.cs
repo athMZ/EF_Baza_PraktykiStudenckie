@@ -12,8 +12,8 @@ namespace EF_Baza_PraktykiStudenckie.Models
         [Key]
         [Column("ID_Studenta")]
         public int IdStudenta { get; set; }
-        public string Początek { get; set; }
-        public string Koniec { get; set; }
-        public string Zakres_obowiązków { get; set; }
+        public DateOnly Początek { get; set; }
+        public DateOnly Koniec { get; set; }
+        public string Zakres_obowiązków { get; set; } = String.Empty;
     }
 }

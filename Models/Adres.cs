@@ -10,10 +10,10 @@ namespace EF_Baza_PraktykiStudenckie.Models
         [Key]
         [Column("ID_Firmy")]
         public int Id { get; set; }
-        public string Miejscowość { get; set; }
-        public string Kod_pocztowy { get; set; }
-        public string Ulica { get; set; }
-        public int Nr_budynku { get; set; }
-        public int Nr_lokalu { get; set; }
+        public string Miejscowość { get; set; } = String.Empty;
+        public string Kod_pocztowy { get; set; } = String.Empty;
+        public string Ulica { get; set; } = String.Empty;
+        public int? Nr_budynku { get; set; }
+        public int? Nr_lokalu { get; set; }
     }
 }

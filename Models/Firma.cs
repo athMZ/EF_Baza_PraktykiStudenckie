@@ -9,12 +9,11 @@ namespace EF_Baza_PraktykiStudenckie.Models
         [Column("ID_Firmy")]
         public int Id { get; set; }
 
-        public string Nazwa { get; set; }
+        public string Nazwa { get; set; } = String.Empty;
 
         [StringLength(10)]
-        public string NIP { get; set; }
+        public string NIP { get; set; } = String.Empty;
 
-
-        public string Nr_telefonu { get; set; }
+        public string Nr_telefonu { get; set; } = String.Empty;
     }
 }
