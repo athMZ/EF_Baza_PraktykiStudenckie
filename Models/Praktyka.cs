@@ -1,19 +1,19 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace EF_Baza_PraktykiStudenckie.Models
 {
+    [PrimaryKey(nameof(IdFirmy), nameof(IdStudenta))]
     public class Praktyka
     {
-        [Key]
         [Column("ID_Firmy")]
         public int IdFirmy { get; set; }
 
-        [Key]
         [Column("ID_Studenta")]
         public int IdStudenta { get; set; }
-        public DateOnly Początek { get; set; }
-        public DateOnly Koniec { get; set; }
-        public string Zakres_obowiązków { get; set; } = String.Empty;
+
+        public DateTime Początek { get; set; }
+        public DateTime Koniec { get; set; }
+        public string ZakresObowiązków { get; set; } = string.Empty;
     }
 }

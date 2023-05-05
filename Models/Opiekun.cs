@@ -3,19 +3,16 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace EF_Baza_PraktykiStudenckie.Models
 {
-    public class Student
+    public class Opiekun
     {
         [Key]
-        [Column("ID_Studenta")]
+        [Column("ID_Opiekuna")]
         public int Id { get; set; }
 
         public string Imię { get; set; } = string.Empty;
         public string Nazwisko { get; set; } = string.Empty;
-        public string NrAlbumu { get; set; } = string.Empty;
         public string Email { get; set; } = string.Empty;
-        public int RokStudiów { get; set; }
 
-        public virtual ICollection<Opiekun> Opiekunowie { get; set; } = new List<Opiekun>();
-        public virtual Praktyka Praktyka { get; set; } = new Praktyka();
+        public virtual ICollection<Student> StudenciPodOpieką { get; set; } = new List<Student>();
     }
 }

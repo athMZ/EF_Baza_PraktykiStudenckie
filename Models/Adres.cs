@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace EF_Baza_PraktykiStudenckie.Models
@@ -10,10 +8,13 @@ namespace EF_Baza_PraktykiStudenckie.Models
         [Key]
         [Column("ID_Firmy")]
         public int Id { get; set; }
-        public string Miejscowość { get; set; } = String.Empty;
-        public string Kod_pocztowy { get; set; } = String.Empty;
-        public string Ulica { get; set; } = String.Empty;
-        public int? Nr_budynku { get; set; }
-        public int? Nr_lokalu { get; set; }
+
+        public string Miejscowość { get; set; } = string.Empty;
+        public string KodPocztowy { get; set; } = string.Empty;
+        public string Ulica { get; set; } = string.Empty;
+        public int? NrBudynku { get; set; }
+        public int? NrLokalu { get; set; }
+
+        public virtual Firma Firma { get; set; } = new Firma();
     }
 }

@@ -9,11 +9,13 @@ namespace EF_Baza_PraktykiStudenckie.Models
         [Column("ID_Firmy")]
         public int Id { get; set; }
 
-        public string Nazwa { get; set; } = String.Empty;
+        public string Nazwa { get; set; } = string.Empty;
 
         [StringLength(10)]
-        public string NIP { get; set; } = String.Empty;
+        public string NIP { get; set; } = string.Empty;
 
-        public string Nr_telefonu { get; set; } = String.Empty;
+        public string NrTelefonu { get; set; } = string.Empty;
+
+        public virtual ICollection<Praktyka> Praktyki { get; set; } = new List<Praktyka>();
     }
 }

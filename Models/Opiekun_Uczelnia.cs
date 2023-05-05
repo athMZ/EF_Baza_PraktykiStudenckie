@@ -9,7 +9,9 @@ namespace EF_Baza_PraktykiStudenckie.Models
         [Column("ID_Opiekuna")]
         public int Id { get; set; }
 
-        public string Katedra { get; set; } = String.Empty;
-        public string Wydział { get; set; } = String.Empty;
+        public string Katedra { get; set; } = string.Empty;
+        public string Wydział { get; set; } = string.Empty;
+
+        public virtual Opiekun Opiekun { get; set; } = new Opiekun();
     }
 }

@@ -10,7 +10,9 @@ namespace EF_Baza_PraktykiStudenckie.Models
         public int Id { get; set; }
         [Column("ID_Firmy")]
         public int IdFirmy { get; set; }
-        public string Stanowsisko { get; set; } = String.Empty;
-        public string Nr_telefonu { get; set; } = String.Empty;
+        public string Stanowsisko { get; set; } = string.Empty;
+        public string NrTelefonu { get; set; } = string.Empty;
+
+        public virtual Opiekun Opiekun { get; set; } = new Opiekun();
     }
 }
